@@ -608,7 +608,7 @@ unsigned int voodoo_hook_wm8994_write(struct snd_soc_codec *codec, unsigned int 
 	if (! bypass_write_hook)
 	{
 #ifdef CONFIG_SND_VOODOO_HP_LEVEL_CONTROL
-		if (wm8994->cur_path == HP || wm8994->fmradio_path == FMR_HP)
+		if (wm8994->cur_path == HP3P || wm8994->cur_path == HP4P || wm8994->fmradio_path == FMR_HP)
 		{
 			if (reg == WM8994_LEFT_OUTPUT_VOLUME)
 				value = (WM8994_HPOUT1_VU | WM8994_HPOUT1L_MUTE_N | hplvol);

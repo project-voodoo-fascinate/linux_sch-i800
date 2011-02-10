@@ -49,6 +49,7 @@ snd-soc-wm8994-objs := wm8994.o wm8994_p1.o wm8994_voodoo.o
 else
 snd-soc-wm8994-objs := wm8994.o wm8994_p1.o
 endif
+endif
 snd-soc-wm9081-objs := wm9081.o
 snd-soc-wm9705-objs := wm9705.o
 snd-soc-wm9712-objs := wm9712.o
