@@ -44,6 +44,9 @@ snd-soc-wm8994-objs := wm8994.o wm8994_p1ntt.o
 else ifeq ($(CONFIG_TARGET_LOCALE_USAGSM),y)
 snd-soc-wm8994-objs := wm8994.o wm8994_p1gsm.o
 else
+ifeq ($(CONFIG_SND_VOODOO),y)
+snd-soc-wm8994-objs := wm8994.o wm8994_p1.o wm8994_voodoo.o
+else
 snd-soc-wm8994-objs := wm8994.o wm8994_p1.o
 endif
 snd-soc-wm9081-objs := wm9081.o
